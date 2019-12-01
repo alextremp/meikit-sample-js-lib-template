@@ -1,4 +1,4 @@
-import {{OPEN_BRACE}}{{projectClassName}}} from '../../application/{{projectClassName}}'
+import {{OPEN_BRACE}}{{projectClassName}}{{CLOSE_BRACE}} from '../../application/{{projectClassName}}'
 import {Container} from '../container/Container'
 
 class {{projectClassName}}Initializer {
@@ -8,4 +8,4 @@ class {{projectClassName}}Initializer {
   }
 }
 
-export {{OPEN_BRACE}}{{projectClassName}}Initializer}
+export {{OPEN_BRACE}}{{projectClassName}}Initializer{{CLOSE_BRACE}}
