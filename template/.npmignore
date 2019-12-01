@@ -1,0 +1,13 @@
+src
+lib/test
+dist
+deploy
+deploy.js
+coverage
+.travis.yml
+.idea
+.eslintignore
+.github
+resources
+package
+*.tgz

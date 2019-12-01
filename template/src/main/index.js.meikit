@@ -1,0 +1,2 @@
+import {{OPEN_BRACKET}}{{projectClassName}}Initializer{{CLOSE_BRACKET}} from './infrastructure/bootstrap/{{projectClassName}}Initializer'
+export default {{projectClassName}}Initializer

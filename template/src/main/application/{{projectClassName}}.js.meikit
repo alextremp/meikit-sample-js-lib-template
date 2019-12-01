@@ -1,0 +1,23 @@
+class {{projectClassName}} {
+
+  constructor({container}) {
+    this._container = container
+  }
+
+  /**
+   * TODO remove this example
+   */
+  async sayHello({name}) {
+    return this._container
+      .getInstance({key: 'HelloWorldUseCase'})
+      .execute({name})
+  }
+
+  get config() {
+    return this._container.config
+  }
+}
+
+export {
+  {{projectClassName}}
+}

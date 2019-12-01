@@ -1,0 +1,11 @@
+import {{OPEN_BRACE}}{{projectClassName}}} from '../../application/{{projectClassName}}'
+import {Container} from '../container/Container'
+
+class {{projectClassName}}Initializer {
+  static init({config}) {
+    const container = new Container({config})
+    return new {{projectClassName}}({container})
+  }
+}
+
+export {{OPEN_BRACE}}{{projectClassName}}Initializer}

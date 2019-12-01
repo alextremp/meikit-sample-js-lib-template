@@ -1,0 +1,51 @@
+{
+  "name": "{{projectName}}",
+  "version": "1.0.0",
+  "description": "{{projectDescription}}",
+  "main": "lib",
+  "scripts": {
+    "build": "rm -Rf dist && babel src/main --out-dir dist",
+    "test": "mocha --recursive --require @babel/register \"src/test/**/*Test.js\"",
+    "coverage": "istanbul cover --report cobertura _mocha -- ./src/test* --recursive --compilers js:@babel/register",
+    "lint": "sui-lint js"
+    "clean": "rm -Rf dist",
+    "phoenix": "rm -Rf node_modules && rm -Rf package-lock.json && npm install",
+    "prepack": "rm -Rf dist && npm run build"
+  },
+  "keywords": [
+    "meikit"
+  ],
+  "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "7.5.0",
+    "@babel/register": "7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@s-ui/lint": "2",
+    "babel-loader": "8.0.5",
+    "babel-preset-sui": "3.0.0",
+    "chai": "4.0.2",
+    "jsdom": "15.1.1",
+    "codecov": "3.0.2",
+    "istanbul": "1.1.0-alpha.1",
+    "mocha": "5.2.0",
+    "sinon": "2.3.4"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "babel": {
+    "presets": [
+      "sui"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  }
+}
