@@ -7,7 +7,7 @@
     "build": "rm -Rf dist && babel src/main --out-dir dist",
     "test": "mocha --recursive --require @babel/register \"src/test/**/*Test.js\"",
     "coverage": "istanbul cover --report cobertura _mocha -- ./src/test* --recursive --compilers js:@babel/register",
-    "lint": "sui-lint js"
+    "lint": "sui-lint js",
     "clean": "rm -Rf dist",
     "phoenix": "rm -Rf node_modules && rm -Rf package-lock.json && npm install",
     "prepack": "rm -Rf dist && npm run build"

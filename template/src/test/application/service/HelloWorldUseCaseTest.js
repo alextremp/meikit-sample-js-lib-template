@@ -6,7 +6,7 @@ describe('HelloWorldUseCase', () => {
     const givenInput = {
       name: 'tester'
     }
-    const expectedOutput = 'hello ' + givenInput.name
+    const expectedOutput = 'Hello ' + givenInput.name
 
     const useCase = new HelloWorldUseCase()
     useCase
