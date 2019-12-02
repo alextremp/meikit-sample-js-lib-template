@@ -23,7 +23,7 @@ const customProperties = {
 }
 
 const exclude = [
-  ({file, model}) => file.includes('/domain/bus/') && !model.eventBus === true
+  ({file, model}) => file.includes('/domain/bus/') && !model.eventBus
 ]
 
 module.exports = {
