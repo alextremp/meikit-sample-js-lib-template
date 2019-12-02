@@ -9,6 +9,12 @@ const questions = [
   {
     name: 'projectDescription',
     message: 'Write the Project Description (optional):'
+  },
+  {
+    name: 'eventBus',
+    message: 'Will you use an EventBus?',
+    type: 'confirm',
+    default: true
   }
 ]
 
@@ -16,8 +22,13 @@ const customProperties = {
   projectClassName: '{{capitalize projectName}}'
 }
 
+const exclude = [
+  ({file, model}) => file.includes('/domain/bus/') && !model.eventBus === true
+]
+
 module.exports = {
   questions,
-  customProperties
+  customProperties,
+  exclude
 }
 
